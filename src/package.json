@@ -1,0 +1,21 @@
+{
+  "name": "comparative-extension-module",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cubic-spline": "^3.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.17.1",
+    "leapjs": "^1.1.1",
+    "mathjs": "^11.0.1",
+    "ws": "^7.2.3"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js --ignore *.json"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

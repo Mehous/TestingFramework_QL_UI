@@ -1,0 +1,72 @@
+{
+    "recognizers": [
+        {
+            "name": "$P&sup3+X",
+            "value": "P3DollarPlusXRecognizer"
+        },
+        {
+            "name": "$P&sup3+",
+            "value": "DollarP3Plus"
+        },
+        {
+            "name": "PennyPincher3D",
+            "value": "PennyPincher3D"
+        },
+        {
+            "name": "$F",
+            "value": "DollarFLEX"
+        },
+        {
+            "name": "3 Cents",
+            "value": "ThreeCentsRecognizer"
+        },
+        {
+            "name": "JackKnife",
+            "value": "JackKnifeRecognizer"
+        }
+    ],
+    "datasets": [
+        {
+            "name": "SHREC2019",
+            "value": "SHREC2019"
+        },
+        {
+            "name": "JackKnife",
+            "value": "JackKnife"
+        }
+    ],
+    "joints": [
+        {
+            "name": "1(P)",
+            "value": "0"
+        },
+        {
+            "name": "2(P+I)",
+            "value": "1"
+        },
+        {
+            "name": "2(T+I)",
+            "value": "2"
+        },
+        {
+            "name": "2(I+M)",
+            "value": "3"
+        },
+        {
+            "name": "3(P+I+M)",
+            "value": "4"
+        },
+        {
+            "name": "3(T+I+M)",
+            "value": "5"
+        },
+        {
+            "name": "5(AF)",
+            "value": "6"
+        },
+        {
+            "name": "6(P+AF)",
+            "value": "7"
+        }
+    ]
+}

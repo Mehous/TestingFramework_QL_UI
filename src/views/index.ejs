@@ -1,0 +1,115 @@
+<!--/src/views/index.ejs -->
+<!--
+This HTML code represents the index page of the Comparative Testing Module.
+It includes a form for selecting recognizers, datasets, scenarios, joints, and other parameters for the evaluation tool.
+The form is styled using Bootstrap CSS and custom CSS from the "index.css" file.
+The form data is submitted to the server using the POST method.
+The page also includes a header with the title and description of the module.
+The JavaScript files "script.js" and "render.js" are included for handling form submission and rendering functionality.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Comparative Testing Module</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src='/js/script.js'></script>
+  <script src="js/render.js"></script>
+</head>
+
+<body>
+<div class="jumbotron text-center" id="Header">
+  <h1>Comparative Testing Module</h1>
+  <p>An Evaluation tool for 3D gesture recognizers</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <form id="EvalTool" action="/" method="POST">
+        <div class="form-group row">
+          <fieldset>
+            <label for="recognizer">1- Select recognizers:</label>
+            <ul class="checkbox recos required">
+              <% Values.recognizers.forEach((recognizer) => { %>
+              <li>
+                <input name="recognizer" id="<%= "chx" + Values.recognizers.indexOf(recognizer) %>" type="checkbox" value="<%= recognizer.value %>">
+                <label>
+                  <%- recognizer.name.replace(/&sup(.)/g, '<sup>$1</sup>' ); %>
+                </label>
+                <br>
+              </li>
+              <% }) %>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="form-group row">
+          <fieldset>
+            <label for="dataset">2- Choose a dataset:</label>
+            <select id="datasets" name="dataset" required>
+              <% Values.datasets.forEach((dataset) => { %>
+              <option value="<%= dataset.value %>">
+                <%= dataset.name %>
+              </option>
+              <% }) %>
+            </select>
+          </fieldset>
+        </div>
+        <div class="form-group row">
+          <fieldset required>
+            <label for="scenario">3- Choose a scenario:</label>
+            <input type="radio" id="scenario1" name="scenario" value="0">
+            <label for="User-dependent">User-dependent</label>
+            <input type="radio" id="scenario2" name="scenario" value="1">
+            <label for="User-independent">User-independent</label>
+          </fieldset>
+        </div>
+        <div class="form-group row">
+          <fieldset>
+            <label for="joints">4- Select Joints (A):</label>
+            <ul class="checkbox joint required">
+              <% Values.joints.forEach((joint) => { %>
+              <li>
+                <input name="joint" id="<%= "chA" + joint.value %>" type="checkbox" value="<%= joint.value %>">
+                <label>
+                  <%= joint.name %>
+                </label>
+                <br>
+              </li>
+              <% }) %>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="form-group row">
+          <label for="rangetemplates">5- Max Number of Templates (T):</label>
+          <input type="text" id="MAXT" name="rangetemplates" class="form-control" required>
+        </div>
+        <div class="form-group row">
+          <label for="rangeindependentparticipants">6- Max Number of Independent Participants (P):</label>
+          <input type="text" id="MAXP" name="rangeindependentparticipants" class="form-control">
+          <small id="maxp-small" class="form-text text-muted">For user-independent scenario.</small>
+        </div>
+        <div class="form-group row">
+          <label for="repetitions">7- Repetitions (R):</label>
+          <input type="text" id="MAXR" name="repetitions" class="form-control" required>
+        </div>
+        <div class="form-group row">
+          <label for="resamplingpoints">8- Resampling Points (N):</label>
+          <input type="text" id="MAXN" name="resamplingpoints" class="form-control" required>
+        </div>
+        <div class="form-group row">
+          <fieldset>
+            <button type="submit" class="btn btn-default" id="launch-test">Test</button>
+            <button type="button" class="btn btn-default" id="reset-field" onclick="resetForm()">Reset</button>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src='https://code.jquery.com/jquery-3.4.1.js' integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=' crossorigin='anonymous'></script>
+</body>
+</html>

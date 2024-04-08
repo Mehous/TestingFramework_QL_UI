@@ -1,0 +1,82 @@
+/*src/public/css/index.css */
+
+/* Styling for buttons */
+button {
+  margin: 17px auto;
+  background-color: red;
+  color: black;
+}
+
+/* Styling for disabled buttons */
+button:disabled,
+button[disabled] {
+  background-color: gray;
+  color: black;
+  pointer-events: none;
+}
+
+/* Styling for the Header element */
+#Header {
+  background-color: red !important;
+}
+
+/* Styling for fieldset group */
+fieldset.group {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.25em;
+  padding: 0.125em;
+  display: block;
+}
+
+/* Styling for fieldset group legend */
+fieldset.group legend {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 100%;
+  color: black;
+}
+
+/* Styling for checkbox list */
+ul.checkbox {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  list-style: none;
+}
+
+/* Styling for checkbox list items */
+ul.checkbox li input {
+  margin-right: 0.25em;
+}
+
+ul.checkbox li {
+  border: 1px transparent solid;
+}
+
+/* Styling for hover and focus on checkbox list items */
+ul.checkbox li:hover,
+ul.checkbox li.focus {
+  background-color: lightyellow;
+  border: 1px gray solid;
+  width: 12em;
+}
+
+/* Styling for checkbox list items */
+ul.checkbox li {
+  border: 1px transparent solid;
+  display: inline-block;
+  width: 12em;
+}
+
+/* Styling for row */
+.row {
+  display: inherit !important;
+}
+
+/* Styling for container */
+.container {
+  transform: translateX(350px);
+}
