@@ -1,6 +1,6 @@
 const ejs = require("ejs"); // Importing the ejs module
 const Config = require('../Configuration.js'); // Importing the Config module from the Configuration.js file
-const { Start } = require("../benchmark.js"); // Importing the Start function from the benchmark.js file
+const { Start } = require("../testing.js"); // Importing the Start function from the testing.js file
 const Interface = require('../public/json/interfaceval.json'); // Importing the Interface object from the interfaceval.json file
 
 let testVar = ""; // Declaring a variable to store test data
