@@ -19,4 +19,4 @@ Use the TestingFramework QL GUI to modify the parameters of the testing.
 ### Retrieve results files in the folder ./json/results/
     
 ## Useful repositories
-* [QuantumLeap](https://github.com/sluyters/QuantumLeap): a framework to add gestural support to your application.
+* [QuantumLeap](https://github.com/sluyters/QuantumLeap): a framework to add gestural support to an application.
