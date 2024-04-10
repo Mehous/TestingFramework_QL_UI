@@ -10,13 +10,14 @@
         npm start
 
 
-## How to add and use the TestingFramework QL module to test gestures?
+## How to Add and Use the TestingFramework QL Module for Gesture Recognition Testing?
 ### Configuring TestingFramework QL
-Use the TestingFramework QL GUI to modify the parameters of the testing. 
+You can modify the testing parameters using the TestingFramework QL GUI.
 
-### Adding datasets to the testing module
+### Adding Datasets to the Testing Module
 
-### Retrieve results files in the folder ./json/results/
+### Retrieving Result Files
+You can find the result files in the folder ./json/results/.
     
 ## Useful repositories
-* [QuantumLeap](https://github.com/sluyters/QuantumLeap): a framework to add gestural support to an application.
+* [QuantumLeap](https://github.com/sluyters/QuantumLeap): This framework lets you add gestural support to an application.
